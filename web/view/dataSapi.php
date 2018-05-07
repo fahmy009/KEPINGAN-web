@@ -61,9 +61,33 @@
 
 <div class="container">
   <h1 class="orange-text" style="font-size:20pt">Data Sapi</h1>
-  <a href="" class="btn waves-effect waves-light blue">Tambah</a>
-  <a href="" class="btn waves-effect waves-light yellow accent-3">Edit</a>
-  <a href="" class="btn waves-effect waves-light red accent-3">Hapus</a>
+  <a href="#modalTambah" class="btn waves-effect waves-light blue modal-trigger">Tambah</a>
+
+
+  <!-- modals Tambah -->
+  <div id="modalTambah" class="modal">
+    <div class="modal-content">
+      <h4>Tambah Sapi</h4>
+      <div class="row">
+        <form class="col s12" action="index.html" method="post">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="berat" type="text" class="validate">
+              <label for="berat">Berat Sapi</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="tanggalLahir" type="text" class="datepicker validate">
+              <label for="tanggalLahir">Tanggal Lahir</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
   <table class="highlight responsive-table">
     <thead>
       <tr>
@@ -71,6 +95,7 @@
         <th>Berat (kg)</th>
         <th>Tanggal Lahir</th>
         <th>Umur (tahun)</th>
+        <th>Kontrol</th>
       </tr>
     </thead>
     <tbody>
@@ -80,6 +105,14 @@
               <td><?php echo $single['berat']; ?></td>
               <td><?php echo $single['tanggalLahir']; ?></td>
               <td><?php echo $single['umur']; ?></td>
+              <td>
+                    <a href="" class="btn waves-effect waves-light yellow accent-3">
+                      <i class="material-icons">edit</i>
+                    </a>
+                    <a href="" class="btn waves-effect waves-light red accent-3">
+                      <i class="material-icons">delete</i>
+                    </a>
+              </td>
           </tr>
       <?php } ?>
     </tbody>
