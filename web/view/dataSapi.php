@@ -18,7 +18,7 @@
 </ul>
   <!-- Dropdown Suplay -->
 <ul id="dropdown2" class="dropdown-content">
-<li><a href="#!">Data Penjualan</a></li>
+<li><a href="http://localhost/KEPINGAN/?c=halaman&f=dataPenjualan">Data Penjualan</a></li>
 <li class="divider"></li>
 <li><a href="#!">Ramalan Penjaulan</a></li>
 </ul>
@@ -31,7 +31,7 @@
                 <i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
-            <li><a href="#">Hasil Susu Harian</a></li>
+            <li><a href="http://localhost/KEPINGAN/?c=halaman&f=hasilSusuHarian">Hasil Susu Harian</a></li>
             <!-- Dropdown Penjaulan Trigger -->
             <li>
               <a class="dropdown-trigger" href="#!" data-target="dropdown2">Penjualan
@@ -80,14 +80,13 @@
               <label for="tanggalLahir">Tanggal Lahir</label>
             </div>
           </div>
+            <a href="#!" class="modal-close waves-effect waves-light btn">Simpan</a>
         </form>
       </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
   </div>
 
+<!-- table -->
   <table class="highlight responsive-table">
     <thead>
       <tr>

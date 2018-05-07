@@ -21,4 +21,14 @@ class halaman
         $data = ModelDataSapi::getData();
         require 'web/view/dataSapi.php';
     }
+    public function hasilSusuHarian()
+    {
+        $data = ModelHasilSusu::getData();
+        require 'web/view/hasilSusuHarian.php';
+    }
+    public function dataPenjualan()
+    {
+        $data = ModelPenjualan::getData();
+        require 'web/view/dataPenjualan.php';
+    }
 }

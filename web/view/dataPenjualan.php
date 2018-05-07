@@ -31,7 +31,7 @@
                 <i class="material-icons right">arrow_drop_down</i>
               </a>
             </li>
-            <li><a href="#">Hasil Susu Harian</a></li>
+            <li><a href="http://localhost/KEPINGAN/?c=halaman&f=hasilSusuHarian">Hasil Susu Harian</a></li>
             <!-- Dropdown Penjaulan Trigger -->
             <li>
               <a class="dropdown-trigger" href="#!" data-target="dropdown2">Penjualan
@@ -46,21 +46,6 @@
               <a class="dropdown-trigger" href="#!" data-target="dropdown1">Suplay<i class="material-icons right">arrow_drop_down</i>
               </a>
             </li> -->
-          <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-              <li>
-                <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="#!">First</a></li>
-                    <li><a href="#!">Second</a></li>
-                    <li><a href="#!">Third</a></li>
-                    <li><a href="#!">Fourth</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </li>
             <li><a href="#">Hasil Susu Harian</a></li>
             <!-- <li>
               <a class="dropdown-trigger" href="#!" data-target="dropdown2">Penjualan<i class="material-icons right">arrow_drop_down</i>
@@ -71,62 +56,62 @@
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-        <br><br>
-        <h1 class="header center orange-text">Susu Sapi Rembangan</h1>
-        <div class="row center">
-            <h5 class="header col s12 light">Lorem ipsum dolor sit amet</h5>
-        </div>
-        <div class="row center">
-            <a href="http://localhost/KEPINGAN/?c=halaman&f=penjualan" id="download-button"
-               class="btn-large waves-effect waves-light ligth-blue">Mulai</a>
 
-        </div>
-        <br><br>
-    </div>
-</div>
-
+<!-- Content -->
 
 <div class="container">
-    <div class="section">
-        <div class="row">
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                    <h5 class="center">Peramalan Penjualan</h5>
+  <h1 class="orange-text" style="font-size:20pt">Data Penjaulan</h1>
+  <a href="#modalTambah" class="btn waves-effect waves-light blue modal-trigger">Tambah</a>
 
-                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut necessitatibus
-                        omnis tempore unde. Atque dicta nihil numquam obcaecati omnis provident ratione ut voluptate
-                        voluptatem. Autem id porro soluta velit?</p>
-                </div>
+
+  <!-- modals Tambah -->
+  <div id="modalTambah" class="modal">
+    <div class="modal-content">
+      <h4>Tambah Data</h4>
+      <div class="row">
+        <form class="col s12" action="index.html" method="post">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="berat" type="text" class="validate">
+              <label for="berat">Berat Sapi</label>
             </div>
-
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">trending_up</i></h2>
-                    <h5 class="center">Statistik</h5>
-
-                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laborum minus
-                        neque numquam pariatur possimus quo sapiente vel? Amet commodi facilis labore officia quibusdam
-                        quo quod rerum suscipit! Delectus, earum?</p>
-                </div>
+            <div class="input-field col s12">
+              <input id="tanggalLahir" type="text" class="datepicker validate">
+              <label for="tanggalLahir">Tanggal Lahir</label>
             </div>
-
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">assignment</i></h2>
-                    <h5 class="center">Pengelolaan</h5>
-
-                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad consequuntur dolor
-                        inventore magni officiis provident, quis? Debitis, perspiciatis, suscipit? Aperiam, consequuntur
-                        corporis esse fuga neque perspiciatis quia tempora ut.</p>
-                </div>
-            </div>
-        </div>
-
+          </div>
+            <a href="#!" class="modal-close waves-effect waves-light btn">Simpan</a>
+        </form>
+      </div>
     </div>
-    <br><br>
+  </div>
+
+<!-- table -->
+  <table class="highlight responsive-table">
+    <thead>
+      <tr>
+        <th>Tanggal</th>
+        <th>Jumlah (Lt)</th>
+        <th>Kontrol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($data as $single) { ?>
+          <tr>
+              <td><?php echo $single['tanggal']; ?></td>
+              <td><?php echo $single['jumlah']; ?></td>
+              <td>
+                    <a href="" class="btn waves-effect waves-light yellow accent-3">
+                      <i class="material-icons">edit</i>
+                    </a>
+                    <a href="" class="btn waves-effect waves-light red accent-3">
+                      <i class="material-icons">delete</i>
+                    </a>
+              </td>
+          </tr>
+      <?php } ?>
+    </tbody>
+  </table>
 </div>
 
 <footer class="page-footer blue" id="footer">

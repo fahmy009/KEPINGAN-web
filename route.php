@@ -7,6 +7,8 @@ function call($controller, $action)
         case 'halaman':
             require_once 'web/model/Peternakan.php';
             require_once 'web/model/ModelDataSapi.php';
+            require_once 'web/model/ModelHasilSusu.php';
+            require_once 'web/model/ModelPenjualan.php';
             $controller = new halaman();
             break;
         case 'penjualan':
