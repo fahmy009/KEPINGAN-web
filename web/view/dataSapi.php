@@ -46,21 +46,6 @@
               <a class="dropdown-trigger" href="#!" data-target="dropdown1">Suplay<i class="material-icons right">arrow_drop_down</i>
               </a>
             </li> -->
-          <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-              <li>
-                <a class="collapsible-header">Dropdown<i class="material-icons">arrow_drop_down</i></a>
-                <div class="collapsible-body">
-                  <ul>
-                    <li><a href="#!">First</a></li>
-                    <li><a href="#!">Second</a></li>
-                    <li><a href="#!">Third</a></li>
-                    <li><a href="#!">Fourth</a></li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </li>
             <li><a href="#">Hasil Susu Harian</a></li>
             <!-- <li>
               <a class="dropdown-trigger" href="#!" data-target="dropdown2">Penjualan<i class="material-icons right">arrow_drop_down</i>
@@ -71,62 +56,34 @@
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-        <br><br>
-        <h1 class="header center orange-text">Susu Sapi Rembangan</h1>
-        <div class="row center">
-            <h5 class="header col s12 light">Lorem ipsum dolor sit amet</h5>
-        </div>
-        <div class="row center">
-            <a href="http://localhost/KEPINGAN/?c=halaman&f=penjualan" id="download-button"
-               class="btn-large waves-effect waves-light ligth-blue">Mulai</a>
 
-        </div>
-        <br><br>
-    </div>
-</div>
-
+<!-- Content -->
 
 <div class="container">
-    <div class="section">
-        <div class="row">
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                    <h5 class="center">Peramalan Penjualan</h5>
-
-                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aut necessitatibus
-                        omnis tempore unde. Atque dicta nihil numquam obcaecati omnis provident ratione ut voluptate
-                        voluptatem. Autem id porro soluta velit?</p>
-                </div>
-            </div>
-
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">trending_up</i></h2>
-                    <h5 class="center">Statistik</h5>
-
-                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam laborum minus
-                        neque numquam pariatur possimus quo sapiente vel? Amet commodi facilis labore officia quibusdam
-                        quo quod rerum suscipit! Delectus, earum?</p>
-                </div>
-            </div>
-
-            <div class="col s12 m4">
-                <div class="icon-block">
-                    <h2 class="center light-blue-text"><i class="material-icons">assignment</i></h2>
-                    <h5 class="center">Pengelolaan</h5>
-
-                    <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad consequuntur dolor
-                        inventore magni officiis provident, quis? Debitis, perspiciatis, suscipit? Aperiam, consequuntur
-                        corporis esse fuga neque perspiciatis quia tempora ut.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <br><br>
+  <h1 class="orange-text" style="font-size:20pt">Data Sapi</h1>
+  <a href="" class="btn waves-effect waves-light blue">Tambah</a>
+  <a href="" class="btn waves-effect waves-light yellow accent-3">Edit</a>
+  <a href="" class="btn waves-effect waves-light red accent-3">Hapus</a>
+  <table class="highlight responsive-table">
+    <thead>
+      <tr>
+        <th>id Sapi</th>
+        <th>Berat (kg)</th>
+        <th>Tanggal Lahir</th>
+        <th>Umur (tahun)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($data as $single) { ?>
+          <tr>
+              <td><?php echo $single['id']; ?></td>
+              <td><?php echo $single['berat']; ?></td>
+              <td><?php echo $single['tanggalLahir']; ?></td>
+              <td><?php echo $single['umur']; ?></td>
+          </tr>
+      <?php } ?>
+    </tbody>
+  </table>
 </div>
 
 <footer class="page-footer blue" id="footer">

@@ -6,6 +6,7 @@ function call($controller, $action)
     switch ($controller) {
         case 'halaman':
             require_once 'web/model/Peternakan.php';
+            require_once 'web/model/ModelDataSapi.php';
             $controller = new halaman();
             break;
         case 'penjualan':

@@ -16,4 +16,9 @@ class halaman
         $data = Peternakan::getDataPenjualan(date('m'));
         require 'web/view/penjualan.php';
     }
+    public function dataSapi()
+    {
+        $data = ModelDataSapi::getData();
+        require 'web/view/dataSapi.php';
+    }
 }

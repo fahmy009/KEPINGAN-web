@@ -11,7 +11,7 @@
 </head>
 <body>
 <nav class="blue" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">KEPINGAN</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="http://localhost/KEPINGAN" class="brand-logo">KEPINGAN</a>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
