@@ -15,8 +15,8 @@ class ModelDataSapi
                 $output[] = array(
                     'id' => $item['id'],
                     'berat' => $item['berat'],
-                    'tanggalLahir'=> $item['tanggalLahir'],
-                    'umur'=> $item['umur']
+                    'tanggalLahir' => $item['tanggalLahir'],
+                    'umur' => $item['umur']
                 );
             }
             return $output;
@@ -24,16 +24,17 @@ class ModelDataSapi
             return 'kosong';
         }
     }
-    public function insertData($berat, $tanggalLahir)
+
+    public static function insertData($berat, $tanggalLahir)
     {
-      $db = DB::getInstance();
-      $result = $db->exec("INSERT INTO dataSapi VALUES(NULL,$berat,'$tanggalLahir')");
+        $db = DB::getInstance();
+        $result = $db->exec("INSERT INTO dataSapi VALUES(NULL,$berat,'$tanggalLahir')");
     }
 
-    public function deleteData($id)
+    public static function deleteData($id)
     {
-      $db = DB::getInstance();
-      $result = $db->exec("DELETE FROM dataSapi WHERE id=$id");
+        $db = DB::getInstance();
+        $result = $db->exec("DELETE FROM dataSapi WHERE id=$id");
     }
 
 }

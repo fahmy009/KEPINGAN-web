@@ -15,13 +15,25 @@ class ModelHasilSusu
                 $output[] = array(
                     'tanggal' => $item['tanggal'],
                     'idSapi' => $item['idSapi'],
-                    'jumlah'=> $item['jumlah']
+                    'jumlah' => $item['jumlah']
                 );
             }
             return $output;
         } else {
             return 'kosong';
         }
+    }
+
+    public static function insertData($berat, $tanggalLahir)
+    {
+        $db = DB::getInstance();
+        $result = $db->exec("INSERT INTO dataSapi VALUES(NULL,$berat,'$tanggalLahir')");
+    }
+
+    public static function deleteData($id)
+    {
+        $db = DB::getInstance();
+        $result = $db->exec("DELETE FROM dataSapi WHERE id=$id");
     }
 
 }
