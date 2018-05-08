@@ -20,7 +20,7 @@
 <ul id="dropdown2" class="dropdown-content">
     <li><a href="http://localhost/KEPINGAN/?c=halaman&f=dataPenjualan">Data Penjualan</a></li>
     <li class="divider"></li>
-    <li><a href="#!">Ramalan Penjaulan</a></li>
+    <li><a href="#!">Ramalan penjualan</a></li>
 </ul>
 <nav class="blue" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="http://localhost/KEPINGAN" class="brand-logo">KEPINGAN</a>
@@ -32,7 +32,7 @@
                 </a>
             </li>
             <li><a href="http://localhost/KEPINGAN/?c=halaman&f=hasilSusuHarian">Hasil Susu Harian</a></li>
-            <!-- Dropdown Penjaulan Trigger -->
+            <!-- Dropdown penjualan Trigger -->
             <li>
                 <a class="dropdown-trigger" href="#!" data-target="dropdown2">Penjualan
                     <i class="material-icons right">arrow_drop_down</i>
@@ -60,7 +60,7 @@
 <!-- Content -->
 
 <div class="container">
-    <h1 class="orange-text" style="font-size:20pt">Data Penjaulan</h1>
+    <h1 class="orange-text" style="font-size:20pt">Data penjualan</h1>
     <a href="#modalTambah" class="btn waves-effect waves-light blue modal-trigger">Tambah</a>
 
 
