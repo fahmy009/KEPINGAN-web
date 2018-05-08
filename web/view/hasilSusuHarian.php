@@ -91,6 +91,7 @@
         <table class="highlight responsive-table">
             <thead>
             <tr>
+                <td>ID</td>
                 <th>Tanggal</th>
                 <th>id Sapi</th>
                 <th>Jumlah (Lt)</th>
@@ -100,6 +101,7 @@
             <tbody>
             <?php foreach ($data as $single) { ?>
                 <tr>
+                    <td><?php echo $single['id']; ?></td>
                     <td><?php echo $single['tanggal']; ?></td>
                     <td><?php echo $single['idSapi']; ?></td>
                     <td><?php echo $single['jumlah']; ?></td>
@@ -157,7 +159,6 @@
 <script src="assets/js/jquery-3.2.1.js"></script>
 <script src="assets/js/materialize.js"></script>
 <script src="assets/js/init.js"></script>
-
 
 
 </body>

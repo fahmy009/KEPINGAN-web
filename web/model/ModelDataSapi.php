@@ -29,12 +29,22 @@ class ModelDataSapi
     {
         $db = DB::getInstance();
         $result = $db->exec("INSERT INTO dataSapi VALUES(NULL,$berat,'$tanggalLahir')");
+        if ($result > 0) {
+            return 'sukses';
+        } else {
+            return 'gagal';
+        }
     }
 
     public static function deleteData($id)
     {
         $db = DB::getInstance();
         $result = $db->exec("DELETE FROM dataSapi WHERE id=$id");
+        if ($result > 0) {
+            return 'sukses';
+        } else {
+            return 'gagal';
+        }
     }
 
 }

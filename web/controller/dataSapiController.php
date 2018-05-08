@@ -11,8 +11,9 @@ class dataSapiController
         $berat = $_POST['berat'];
         $tanggalLahir = $_POST['tanggalLahir'];
         $hasil = ModelDataSapi::insertData($berat,$tanggalLahir);
-        $data = ModelDataSapi::getData();
-        require 'web/view/dataSapi.php';
+        header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataSapi');
+        // $data = ModelDataSapi::getData();
+        // require 'web/view/dataSapi.php';
     }
 
     public function deleteData(){
