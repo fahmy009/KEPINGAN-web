@@ -69,18 +69,41 @@
     <div class="modal-content">
       <h4>Tambah Sapi</h4>
       <div class="row">
-        <form class="col s12" action="index.html" method="post">
+        <form class="col s12" action="http://localhost/KEPINGAN/?c=dataSapiController&f=addData" method="post">
           <div class="row">
             <div class="input-field col s12">
-              <input id="berat" type="text" class="validate">
+              <input id="berat" name="berat" type="text" class="validate">
               <label for="berat">Berat Sapi</label>
             </div>
             <div class="input-field col s12">
-              <input id="tanggalLahir" type="text" class="datepicker validate">
+              <input id="tanggalLahir" name="tanggalLahir" type="text" class="datepicker validate">
               <label for="tanggalLahir">Tanggal Lahir</label>
             </div>
           </div>
-            <a href="#!" class="modal-close waves-effect waves-light btn">Simpan</a>
+            <input type="submit" name="" class="modal-close waves-effect waves-light btn" value="Simpan">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- modals Edit -->
+  <div id="modalEdit" class="modal">
+    <div class="modal-content">
+      <h4>Edit Sapi</h4>
+      <div class="row">
+        <form class="col s12" action="http://localhost/KEPINGAN/?c=dataSapiController&f=editData" method="post">
+          <input type="hidden" name="id" id="id">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="beratEdit" name="berat" type="text" class="validate">
+              <label id="labelBerat" for="berat">Berat Sapi</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="tanggalLahirEdit" name="tanggalLahir" type="text" class="datepicker validate">
+              <label id="labelTanggal" for="tanggalLahir">Tanggal Lahir</label>
+            </div>
+          </div>
+            <input type="submit" name="" class="modal-close waves-effect waves-light btn" value="Simpan">
         </form>
       </div>
     </div>
@@ -105,10 +128,10 @@
               <td><?php echo $single['tanggalLahir']; ?></td>
               <td><?php echo $single['umur']; ?></td>
               <td>
-                    <a href="" class="btn waves-effect waves-light yellow accent-3">
+                    <a href="#modalEdit" onclick="setData(<?php echo $single['id'] ?>)" class="btn waves-effect waves-light yellow accent-3 modal-trigger">
                       <i class="material-icons">edit</i>
                     </a>
-                    <a href="" class="btn waves-effect waves-light red accent-3">
+                    <a href="http://localhost/KEPINGAN/?c=dataSapiController&f=deleteData&id=<?php  echo $single['id']; ?>" class="btn waves-effect waves-light red accent-3">
                       <i class="material-icons">delete</i>
                     </a>
               </td>
@@ -156,5 +179,19 @@
 <script src="assets/js/materialize.js"></script>
 <script src="assets/js/init.js"></script>
 
+<script type="text/javascript">
+  function setData(id) {
+    var idProduct = id;
+    <?php
+      $modelSapi = new ModelDataSapi();
+      $dataSapi = $modelSapi->getData();
+      foreach ($dataSapi as $data) {
+        echo "if (idProduct==$data[id]) {\$(\"#beratEdit\").val(\"$data[berat]\");\$(\"#tanggalLahirEdit\").val(\"$data[tanggalLahir]\");\$(\"#id\").val(\"$data[id]\");}";
+      };
+     ?>
+     $("#labelBerat").addClass("active");
+     $("#labelTanggal").addClass("active");
+  }
+</script>
 </body>
 </html>

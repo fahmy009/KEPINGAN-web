@@ -1,3 +1,9 @@
+var elems = document.querySelectorAll('.datepicker');
+var options = {
+  format: 'yyyy-mm-dd'
+};
+var instances = M.Datepicker.init(elems, options);
+
 (function($){
   $(function(){
 
@@ -5,6 +11,5 @@
     $(".dropdown-trigger").dropdown();
     $('.collapsible').collapsible();
     $('.modal').modal();
-    $('.datepicker').datepicker();
   }); // end of document ready
 })(jQuery); // end of jQuery name space

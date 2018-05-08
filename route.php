@@ -15,6 +15,10 @@ function call($controller, $action)
             require_once 'web/model/Peternakan.php';
             $controller = new penjualan();
             break;
+        case 'dataSapiController':
+            require_once 'web/model/ModelDataSapi.php';
+            $controller = new dataSapiController();
+            break;
         default:
             //TODO: buat aksi bila jalur yang dituju tidak tersedia
             break;
