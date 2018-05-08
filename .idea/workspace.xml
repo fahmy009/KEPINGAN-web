@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5306e139-f37d-4273-9e5e-be27201c8c98" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/view/dataSapi.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/view/dataSapi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/view/hasilSusuHarian.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/view/hasilSusuHarian.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +16,8 @@
       <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/view/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="167" column="41" lean-forward="true" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
+            <state relative-caret-position="2505">
+              <caret line="167" column="41" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -28,8 +25,8 @@
       <file leaf-file-name="hasilSusuHarian.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/view/hasilSusuHarian.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+            <state relative-caret-position="500">
+              <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
             </state>
           </provider>
         </entry>
@@ -37,8 +34,8 @@
       <file leaf-file-name="dataSapi.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/view/dataSapi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="121" column="30" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
+            <state relative-caret-position="1355">
+              <caret line="193" column="21" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -83,6 +80,7 @@
         <option value="$PROJECT_DIR$/web/view/dataPenjualan.php" />
         <option value="$PROJECT_DIR$/web/view/home.php" />
         <option value="$PROJECT_DIR$/web/view/dataSapi.php" />
+        <option value="$PROJECT_DIR$/web/model/ModelDataSapi.php" />
         <option value="$PROJECT_DIR$/web/view/hasilSusuHarian.php" />
       </list>
     </option>
@@ -107,7 +105,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,12 +132,19 @@
               <item name="KEPINGAN" type="b2602c69:ProjectViewProjectNode" />
               <item name="KEPINGAN" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="KEPINGAN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KEPINGAN" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,11 +193,12 @@
       <workItem from="1525308955069" duration="1965000" />
       <workItem from="1525312193066" duration="14646000" />
       <workItem from="1525751560920" duration="2044000" />
+      <workItem from="1525756603337" duration="434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23495000" />
+    <option name="totallyTimeSpent" value="23929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -206,15 +211,15 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -227,6 +232,27 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/view/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2505">
+          <caret line="167" column="41" lean-forward="true" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/dataSapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1815">
+          <caret line="121" column="30" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/hasilSusuHarian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -354,9 +380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/init.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/controller/halaman.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -399,27 +422,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/view/dataPenjualan.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/view/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="167" column="41" lean-forward="true" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
+        <state relative-caret-position="2505">
+          <caret line="167" column="41" selection-start-line="167" selection-start-column="41" selection-end-line="167" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/model/ModelDataSapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="86" lean-forward="true" selection-start-line="29" selection-start-column="86" selection-end-line="29" selection-end-column="86" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/view/dataSapi.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="121" column="30" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
+        <state relative-caret-position="1355">
+          <caret line="193" column="21" selection-start-line="193" selection-start-column="21" selection-end-line="193" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/view/hasilSusuHarian.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="79" column="40" selection-start-line="79" selection-start-column="40" selection-end-line="79" selection-end-column="40" />
+        <state relative-caret-position="500">
+          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
         </state>
       </provider>
     </entry>
