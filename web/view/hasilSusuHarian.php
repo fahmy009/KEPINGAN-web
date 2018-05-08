@@ -73,11 +73,11 @@
           <div class="row">
             <div class="input-field col s12">
               <input id="berat" type="text" class="validate">
-              <label for="berat">Berat Sapi</label>
+              <label for="berat" class="active">Berat Sapi</label>
             </div>
             <div class="input-field col s12">
               <input id="tanggalLahir" type="text" class="datepicker validate">
-              <label for="tanggalLahir">Tanggal Lahir</label>
+              <label for="tanggalLahir" class="active">Tanggal Lahir</label>
             </div>
           </div>
             <a href="#!" class="modal-close waves-effect waves-light btn">Simpan</a>

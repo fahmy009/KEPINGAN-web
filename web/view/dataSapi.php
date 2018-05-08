@@ -10,33 +10,33 @@
     <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <!-- Dropdown Suplay -->
+<!-- Dropdown Suplay -->
 <ul id="dropdown1" class="dropdown-content">
-  <li><a href="http://localhost/KEPINGAN/?c=halaman&f=dataSapi">Data Sapi</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">Data Pangan Sapi</a></li>
+    <li><a href="http://localhost/KEPINGAN/?c=halaman&f=dataSapi">Data Sapi</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Data Pangan Sapi</a></li>
 </ul>
-  <!-- Dropdown Suplay -->
+<!-- Dropdown Suplay -->
 <ul id="dropdown2" class="dropdown-content">
-<li><a href="http://localhost/KEPINGAN/?c=halaman&f=dataPenjualan">Data Penjualan</a></li>
-<li class="divider"></li>
-<li><a href="#!">Ramalan Penjaulan</a></li>
+    <li><a href="http://localhost/KEPINGAN/?c=halaman&f=dataPenjualan">Data Penjualan</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Ramalan Penjaulan</a></li>
 </ul>
 <nav class="blue" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="http://localhost/KEPINGAN" class="brand-logo">KEPINGAN</a>
         <ul class="right hide-on-med-and-down">
             <!-- Dropdown Suplay Trigger -->
             <li>
-              <a class="dropdown-trigger" href="#!" data-target="dropdown1">Suplay
-                <i class="material-icons right">arrow_drop_down</i>
-              </a>
+                <a class="dropdown-trigger" href="#!" data-target="dropdown1">Suplay
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
             </li>
             <li><a href="http://localhost/KEPINGAN/?c=halaman&f=hasilSusuHarian">Hasil Susu Harian</a></li>
             <!-- Dropdown Penjaulan Trigger -->
             <li>
-              <a class="dropdown-trigger" href="#!" data-target="dropdown2">Penjualan
-                <i class="material-icons right">arrow_drop_down</i>
-              </a>
+                <a class="dropdown-trigger" href="#!" data-target="dropdown2">Penjualan
+                    <i class="material-icons right">arrow_drop_down</i>
+                </a>
             </li>
             <li><a href="#footer">Tentang</a></li>
         </ul>
@@ -60,62 +60,68 @@
 <!-- Content -->
 
 <div class="container">
-  <h1 class="orange-text" style="font-size:20pt">Data Sapi</h1>
-  <a href="#modalTambah" class="btn waves-effect waves-light blue modal-trigger">Tambah</a>
+    <h1 class="orange-text" style="font-size:20pt">Data Sapi</h1>
+    <a href="#modalTambah" class="btn waves-effect waves-light blue modal-trigger">Tambah</a>
 
 
-  <!-- modals Tambah -->
-  <div id="modalTambah" class="modal">
-    <div class="modal-content">
-      <h4>Tambah Sapi</h4>
-      <div class="row">
-        <form class="col s12" action="index.html" method="post">
-          <div class="row">
-            <div class="input-field col s12">
-              <input id="berat" type="text" class="validate">
-              <label for="berat">Berat Sapi</label>
+    <!-- modals Tambah -->
+    <div id="modalTambah" class="modal">
+        <div class="modal-content">
+            <h4>Tambah Sapi</h4>
+            <div class="row">
+                <form class="col s12" action="index.html" method="post">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="berat" type="text" class="validate">
+                            <label for="berat">Berat Sapi</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="tanggalLahir" type="text" class="datepicker validate">
+                            <label for="tanggalLahir">Tanggal Lahir</label>
+                        </div>
+                    </div>
+                    <a href="#!" class="modal-close waves-effect waves-light btn">Simpan</a>
+                </form>
             </div>
-            <div class="input-field col s12">
-              <input id="tanggalLahir" type="text" class="datepicker validate">
-              <label for="tanggalLahir">Tanggal Lahir</label>
-            </div>
-          </div>
-            <a href="#!" class="modal-close waves-effect waves-light btn">Simpan</a>
-        </form>
-      </div>
+        </div>
     </div>
-  </div>
 
-<!-- table -->
-  <table class="highlight responsive-table">
-    <thead>
-      <tr>
-        <th>id Sapi</th>
-        <th>Berat (kg)</th>
-        <th>Tanggal Lahir</th>
-        <th>Umur (tahun)</th>
-        <th>Kontrol</th>
-      </tr>
-    </thead>
-    <tbody>
-      <?php foreach ($data as $single) { ?>
-          <tr>
-              <td><?php echo $single['id']; ?></td>
-              <td><?php echo $single['berat']; ?></td>
-              <td><?php echo $single['tanggalLahir']; ?></td>
-              <td><?php echo $single['umur']; ?></td>
-              <td>
-                    <a href="" class="btn waves-effect waves-light yellow accent-3">
-                      <i class="material-icons">edit</i>
-                    </a>
-                    <a href="" class="btn waves-effect waves-light red accent-3">
-                      <i class="material-icons">delete</i>
-                    </a>
-              </td>
-          </tr>
-      <?php } ?>
-    </tbody>
-  </table>
+    <!-- table -->
+    <?php if ($data != 'kosong') { ?>
+        <table class="highlight responsive-table">
+            <thead>
+            <tr>
+                <th>id Sapi</th>
+                <th>Berat (kg)</th>
+                <th>Tanggal Lahir</th>
+                <th>Umur (tahun)</th>
+                <th>Kontrol</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($data as $single) { ?>
+                <tr>
+                    <td><?php echo $single['id']; ?></td>
+                    <td><?php echo $single['berat']; ?></td>
+                    <td><?php echo $single['tanggalLahir']; ?></td>
+                    <td><?php echo $single['umur']; ?></td>
+                    <td>
+                        <a href="" class="btn waves-effect waves-light yellow accent-3">
+                            <i class="material-icons">edit</i>
+                        </a>
+                        <a href="" class="btn waves-effect waves-light red accent-3">
+                            <i class="material-icons">delete</i>
+                        </a>
+                    </td>
+                </tr>
+            <?php } ?>
+            </tbody>
+        </table>
+    <?php } else { ?>
+        <blockquote>
+            <h3>Tidak Ada Data</h3>
+        </blockquote>
+    <?php } ?>
 </div>
 
 <footer class="page-footer blue" id="footer">
