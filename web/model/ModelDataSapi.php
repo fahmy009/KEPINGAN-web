@@ -36,10 +36,10 @@ class ModelDataSapi
         }
     }
 
-    public function editData($id, $berat, $tanggalLahir)
+    public function updateData($id, $berat, $tanggalLahir)
     {
         $db = DB::getInstance();
-        $result = $db->exec("UPDATE dataSapi berat=$berat,tanggalLahir='$tanggalLahir' WHERE id=$id)");
+        $result = $db->exec("UPDATE dataSapi SET berat=$berat,tanggalLahir='$tanggalLahir' WHERE id=$id");
     }
 
     public static function deleteData($id)

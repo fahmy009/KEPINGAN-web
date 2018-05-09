@@ -12,14 +12,21 @@ class dataSapiController
         $tanggalLahir = $_POST['tanggalLahir'];
         $hasil = ModelDataSapi::insertData($berat,$tanggalLahir);
         header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataSapi');
-        // $data = ModelDataSapi::getData();
-        // require 'web/view/dataSapi.php';
+    }
+
+    public function editData()
+    {
+        $id = $_POST['id'];
+        $berat = $_POST['berat'];
+        $tanggalLahir = $_POST['tanggalLahir'];
+        $hasil = ModelDataSapi::updateData($id, $berat, $tanggalLahir);
+        header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataSapi');
     }
 
     public function deleteData(){
         $id = $_GET['id'];
-        ModelDataSapi::deleteData($id);
-        $data = ModelDataSapi::getData();
-        require 'web/view/dataSapi.php';
+        $hasil = ModelDataSapi::deleteData($id);
+        header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataSapi');
+
     }
 }
