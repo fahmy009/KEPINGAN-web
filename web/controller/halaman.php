@@ -24,6 +24,7 @@ class halaman
     public function hasilSusuHarian()
     {
         $data = ModelHasilSusu::getData();
+        $dataSapi = ModelDataSapi::getData();
         require 'web/view/hasilSusuHarian.php';
     }
     public function dataPenjualan()

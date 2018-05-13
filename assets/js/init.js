@@ -12,6 +12,7 @@ var instances = M.Datepicker.init(elems, options);
     $(".dropdown-trigger").dropdown();
     $('.collapsible').collapsible();
     $('.modal').modal();
+    $('select').formSelect();
   }); // end of document ready
 
 })(jQuery); // end of jQuery name space
