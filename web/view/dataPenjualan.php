@@ -69,18 +69,45 @@
         <div class="modal-content">
             <h4>Tambah Data</h4>
             <div class="row">
-                <form class="col s12" action="index.html" method="post">
+                <form class="col s12" action="http://localhost/KEPINGAN/?c=dataPenjualanController&f=addData" method="post">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="berat" type="text" class="validate">
-                            <label for="berat">Berat Sapi</label>
+                          <input id="tanggal" name="tanggal" type="text" class="datepicker validate">
+                          <label for="tanggal">Tanggal</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="tanggalLahir" type="text" class="datepicker validate">
-                            <label for="tanggalLahir">Tanggal Lahir</label>
+                            <input id="jumlahTerjual" name="jumlahTerjual" type="text" class="validate">
+                            <label for="jumlahTerjual">Jumlah Terjual</label>
                         </div>
                     </div>
-                    <a href="#!" class="modal-close waves-effect waves-light btn">Simpan</a>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Simpan
+                      <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- modals Edit -->
+    <div id="modalEdit" class="modal">
+        <div class="modal-content">
+            <h4>Edit Sapi</h4>
+            <div class="row">
+                <form class="col s12" action="http://localhost/KEPINGAN/?c=dataPenjualanController&f=editData" method="post">
+                    <input type="hidden" name="id" id="id">
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <input id="tanggalEdit" name="tanggal" type="text" class="datepicker validate">
+                          <label id="labelTanggal" for="tanggalEdit">Tanggal</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <input id="jumlahTerjualEdit" name="jumlahTerjual" type="text" class="validate">
+                            <label id="labelJumlahTerjual" for="jumlahTerjualEdit">Jumlah Terjual</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Simpan
+                      <i class="material-icons right">send</i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -102,10 +129,11 @@
                     <td><?php echo $single['tanggal']; ?></td>
                     <td><?php echo $single['jumlah']; ?></td>
                     <td>
-                        <a href="" class="btn waves-effect waves-light yellow accent-3">
+                        <a href="#modalEdit"onclick="setData(<?php echo $single['id'] ?>)"
+                           class="btn waves-effect waves-light yellow accent-3 modal-trigger">
                             <i class="material-icons">edit</i>
                         </a>
-                        <a href="" class="btn waves-effect waves-light red accent-3">
+                        <a href="http://localhost/KEPINGAN/?c=dataPenjualanController&f=deleteData&id=<?php echo $single['id']; ?>" class="btn waves-effect waves-light red accent-3">
                             <i class="material-icons">delete</i>
                         </a>
                     </td>
@@ -157,6 +185,20 @@
 <script src="assets/js/jquery-3.2.1.js"></script>
 <script src="assets/js/materialize.js"></script>
 <script src="assets/js/init.js"></script>
+<script type="text/javascript">
+    function setData(id) {
+        var idProduct = id;
+        <?php
+        $modelPenjualan = new ModelPenjualan();
+        $modelPenjualan = $modelPenjualan->getData();
+        foreach ($modelPenjualan as $data) {
+            echo "if (idProduct==$data[id]) {\$(\"#tanggalEdit\").val(\"$data[tanggal]\");\$(\"#jumlahTerjualEdit\").val(\"$data[jumlah]\");\$(\"#id\").val(\"$data[id]\");}";
+        };
+        ?>
+        $("#labelTanggal").addClass("active");
+        $("#labelJumlahTerjual").addClass("active");
+    }
+</script>
 
 </body>
 </html>

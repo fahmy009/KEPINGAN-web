@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: May 07, 2018 at 01:55 PM
+-- Generation Time: May 13, 2018 at 06:42 PM
 -- Server version: 5.7.22-0ubuntu0.16.04.1
 -- PHP Version: 7.0.28-0ubuntu0.16.04.1
 
@@ -37,8 +37,10 @@ CREATE TABLE `dataSapi` (
 --
 
 INSERT INTO `dataSapi` (`id`, `berat`, `tanggalLahir`) VALUES
-(1, 400, '2011-05-16'),
-(2, 400, '2011-05-16');
+(1, 200, '2011-05-16'),
+(2, 400, '2011-05-16'),
+(3, 23, '2011-06-06'),
+(4, 23, '2018-05-23');
 
 -- --------------------------------------------------------
 
@@ -53,6 +55,14 @@ CREATE TABLE `hasilSusu` (
   `jumlah` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `hasilSusu`
+--
+
+INSERT INTO `hasilSusu` (`id`, `tanggal`, `idSapi`, `jumlah`) VALUES
+(1, '2018-05-06', 1, 1),
+(2, '2018-05-01', 2, 12);
+
 -- --------------------------------------------------------
 
 --
@@ -60,7 +70,7 @@ CREATE TABLE `hasilSusu` (
 --
 
 CREATE TABLE `penjualan` (
-  `id_` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `Tanggal` date NOT NULL,
   `JumlahTerjual` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -69,10 +79,10 @@ CREATE TABLE `penjualan` (
 -- Dumping data for table `penjualan`
 --
 
-INSERT INTO `penjualan` (`id_`, `Tanggal`, `JumlahTerjual`) VALUES
+INSERT INTO `penjualan` (`id`, `Tanggal`, `JumlahTerjual`) VALUES
 (1, '2018-05-03', 122),
 (2, '2018-05-03', 122),
-(3, '2018-05-03', 123);
+(3, '2018-05-03', 125);
 
 --
 -- Indexes for dumped tables
@@ -94,7 +104,7 @@ ALTER TABLE `hasilSusu`
 -- Indexes for table `penjualan`
 --
 ALTER TABLE `penjualan`
-  ADD PRIMARY KEY (`id_`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -104,17 +114,17 @@ ALTER TABLE `penjualan`
 -- AUTO_INCREMENT for table `dataSapi`
 --
 ALTER TABLE `dataSapi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `hasilSusu`
 --
 ALTER TABLE `hasilSusu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `penjualan`
 --
 ALTER TABLE `penjualan`
-  MODIFY `id_` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

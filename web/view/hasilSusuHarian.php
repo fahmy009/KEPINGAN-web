@@ -69,18 +69,63 @@
         <div class="modal-content">
             <h4>Tambah Data</h4>
             <div class="row">
-                <form class="col s12" action="index.html" method="post">
+                <form class="col s12" action="http://localhost/KEPINGAN/?c=dataHasilSusuController&f=addData" method="post">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="berat" type="text" class="validate">
-                            <label for="berat" class="active">Berat Sapi</label>
+                            <input id="tanggal" name="tanggal" type="text" class="datepicker validate">
+                            <label for="tanggal" class="active">Tanggal</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="tanggalLahir" type="text" class="datepicker validate">
-                            <label for="tanggalLahir" class="active">Tanggal Lahir</label>
+                            <select name="idSapi">
+                               <option value="" disabled selected>Pilih id Sapi</option>
+                               <?php foreach ($dataSapi as $sapi) {
+                                    echo "<option value=".$sapi['id'].">".$sapi['id']."</option>";
+                               } ?>
+                            </select>
+                            <label>Id Sapi</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <input id="jumlah" name="jumlah" type="text" class="validate">
+                          <label for="jumlah">Jumlah (Lt)</label>
                         </div>
                     </div>
-                    <a href="#!" class="modal-close waves-effect waves-light btn">Simpan</a>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Simpan
+                      <i class="material-icons right">send</i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- modals edit -->
+    <div id="modalEdit" class="modal">
+        <div class="modal-content">
+            <h4>Edit Data</h4>
+            <div class="row">
+                <form class="col s12" action="http://localhost/KEPINGAN/?c=dataHasilSusuController&f=editData" method="post">
+                    <input type="hidden" name="id" id="id">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="tanggalEdit" name="tanggal" type="text" class="datepicker validate">
+                            <label id="labelTanggal" for="tanggalEdit" class="active">Tanggal</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <select name="idSapi">
+                               <option value="" disabled selected>Pilih id Sapi</option>
+                               <?php foreach ($dataSapi as $sapi) {
+                                    echo "<option value=".$sapi['id'].">".$sapi['id']."</option>";
+                               } ?>
+                            </select>
+                            <label>Id Sapi</label>
+                        </div>
+                        <div class="input-field col s12">
+                          <input id="jumlahEdit" name="jumlah" type="text" class="validate">
+                          <label id="labelJumlah" for="jumlah">Jumlah (Lt)</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Simpan
+                      <i class="material-icons right">send</i>
+                    </button>
                 </form>
             </div>
         </div>
@@ -106,10 +151,10 @@
                     <td><?php echo $single['idSapi']; ?></td>
                     <td><?php echo $single['jumlah']; ?></td>
                     <td>
-                        <a href="" class="btn waves-effect waves-light yellow accent-3">
+                        <a href="#modalEdit" onclick="setData(<?php echo $single['id']  ?>)" class="btn waves-effect waves-light yellow accent-3 modal-trigger">
                             <i class="material-icons">edit</i>
                         </a>
-                        <a href="" class="btn waves-effect waves-light red accent-3">
+                        <a href="http://localhost/KEPINGAN/?c=dataHasilSusuController&f=deleteData&id=<?php echo $single['id'] ?>" class="btn waves-effect waves-light red accent-3">
                             <i class="material-icons">delete</i>
                         </a>
                     </td>
@@ -160,6 +205,20 @@
 <script src="assets/js/materialize.js"></script>
 <script src="assets/js/init.js"></script>
 
+<script type="text/javascript">
+    function setData(id) {
+        var idProduct = id;
+        <?php
+        $ModelHasilSusu = new ModelHasilSusu();
+        $ModelHasilSusu = $ModelHasilSusu->getData();
+        foreach ($ModelHasilSusu as $data) {
+            echo "if (idProduct==$data[id]) {\$(\"#tanggalEdit\").val(\"$data[tanggal]\");\$(\"#jumlahEdit\").val(\"$data[jumlah]\");\$(\"#id\").val(\"$data[id]\");}";
+        };
+        ?>
+        $("#labelTanggal").addClass("active");
+        $("#labelJumlah").addClass("active");
+    }
+</script>
 
 </body>
 </html>
