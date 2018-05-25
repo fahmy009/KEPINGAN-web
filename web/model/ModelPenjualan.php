@@ -6,10 +6,10 @@ class ModelPenjualan
     {
     }
 
-    public static function getData()
+    public static function getData($month)
     {
         $db = DB::getInstance();
-        $result = $db->query("SELECT tanggal, jumlahTerjual, id FROM penjualan");
+        $result = $db->query("SELECT tanggal, jumlahTerjual, id FROM penjualan WHERE MONTH(tanggal)='$month'");
         if ($result->rowCount() > 0) {
             foreach ($result as $item) {
                 $output[] = array(
@@ -38,14 +38,14 @@ class ModelPenjualan
     public function updateData($id, $tanggal, $jumlahTerjual)
     {
         $db = DB::getInstance();
-        echo "UPDATE penjualan SET tanggal='$tanggal', jumlah=$jumlahTerjual WHERE id=$id";
+        echo "UPDATE penjualan SET tanggal='$tanggal', jumlah=$jumlahTerjual WHERE id_=$id";
         $result = $db->exec("UPDATE penjualan SET tanggal='$tanggal', jumlahTerjual=$jumlahTerjual WHERE id=$id");
     }
 
     public static function deleteData($id)
     {
         $db = DB::getInstance();
-        $result = $db->exec("DELETE FROM penjualan WHERE id=$id");
+        $result = $db->exec("DELETE FROM penjualan WHERE id_=$id");
         if ($result > 0) {
             return 'sukses';
         } else {
