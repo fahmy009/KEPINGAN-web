@@ -17,7 +17,7 @@
 
 <div class="container-fluid">
     <h2>Data Sapi</h2>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputPenjualan">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahSapi">
         Tambah
     </button>
     <hr>
@@ -59,7 +59,9 @@
     <?php } ?>
 </div>
 
+
 <?php include "web/elemen/footer.php"; ?>
+<?php include "web/elemen/modal.php"; ?>
 
 <script src="assets/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
 <script src="assets/bootstrap/js/popper.min.js"></script>

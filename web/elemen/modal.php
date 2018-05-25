@@ -1,8 +1,8 @@
-<!--Edit Data Sapi-->
-<div id="editSapi" class="modal" tabindex="-1" role="dialog">
+<!-- Tambah Data Sapi -->
+<div id="tambahSapi" class="modal fade" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form class="col s12" action="http://localhost/KEPINGAN/?c=dataSapiController&f=editData" method="post">
+            <form action="http://localhost/KEPINGAN/?c=dataSapiController&f=addData" method="post">
                 <div class="modal-header">
                     <h5 class="modal-title">Edit Data Sapi</h5>
                 </div>
@@ -95,7 +95,7 @@
 <div class="modal" tabindex="-1" role="dialog" id="tambahSusuHarian">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form class="col s12" action="http://localhost/KEPINGAN/?c=dataHasilSusuController&f=addData" method="post">
+            <form action="http://localhost/KEPINGAN/?c=dataHasilSusuController&f=addData" method="post">
                 <div class="modal-header">
                     <h5 class="modal-title">Tambah Susu Harian</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
