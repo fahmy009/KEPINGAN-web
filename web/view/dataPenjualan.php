@@ -85,6 +85,8 @@
 </div>
 
 <?php include "web/elemen/footer.php"; ?>
+<?php include "web/elemen/modal.php"; ?>
+
 <script type="text/javascript">
     function onChange() {
         var e = document.getElementById("bulan");

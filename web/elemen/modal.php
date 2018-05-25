@@ -92,7 +92,7 @@
 </div>
 
 <!--Input Susu Harian-->
-<div class="modal" tabindex="-1" role="dialog" id="tambahSusuHarian">
+<div class="modal fade" tabindex="-1" role="dialog" id="tambahSusuHarian">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <form action="http://localhost/KEPINGAN/?c=dataHasilSusuController&f=addData" method="post">
@@ -105,10 +105,10 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="tanggal">Tanggal</label>
-                        <input id="tanggal" name="tanggal" type="text" class="form-control validate">
+                        <input id="tanggal" name="tanggal" type="date" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="idSapi">Id Sapi</label>
+                        <label for="idSapi">ID Sapi</label>
                         <select name="idSapi" id="idSapi" class="form-control">
                             <option value="" disabled selected>Pilih id Sapi</option>
                             <?php foreach ($dataSapi as $sapi) {
@@ -116,13 +116,13 @@
                             } ?>
                         </select>
                     </div>
-                    <div class="input-field col s12">
-                        <input id="jumlah" name="jumlah" type="text" class="validate">
+                    <div class="form-group">
+                        <input id="jumlah" name="jumlah" type="text" class="form-control">
                         <label for="jumlah">Jumlah (Lt)</label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <button type="button" class="btn" data-dismiss="modal">Batal</button>
                     <button class="btn btn-primary" type="submit" name="action">Simpan</button>
                 </div>
             </form>

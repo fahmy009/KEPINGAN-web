@@ -8,31 +8,19 @@
 
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-                <a role="button" class="nav-link dropdown-toggle" href="#" id="suplai" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    Suplai
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="http://localhost/KEPINGAN/?c=halaman&f=dataSapi">Data Sapi</a>
-                    <a class="dropdown-item" href="http://localhost/KEPINGAN/?c=halaman&f=dataPanganSapi">Data Pangan
-                        Sapi</a>
-                </div>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost/KEPINGAN/?c=halaman&f=dataSapi">Data Sapi</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="http://localhost/KEPINGAN/?c=halaman&f=hasilSusuHarian">Hasil Susu Harian</a>
             </li>
-            <li class="nav-item dropdown">
-                <a role="button" class="nav-link dropdown-toggle" href="#" id="suplai" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    Penjualan
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="http://localhost/KEPINGAN/?c=halaman&f=dataPenjualan">Data
+            <li class="nav-item">
+                    <a class="nav-link" href="http://localhost/KEPINGAN/?c=halaman&f=dataPenjualan">Data
                         Penjualan</a>
-                    <a class="dropdown-item" href="http://localhost/KEPINGAN/?c=halaman&f=dataPanganSapi">Ramalan
-                        Penjualan</a>
-                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost/KEPINGAN/?c=peramalanController&f=ramal">Ramalan
+                    Penjualan</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Tentang</a>

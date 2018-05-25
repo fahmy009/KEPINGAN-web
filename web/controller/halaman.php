@@ -29,7 +29,7 @@ class halaman
     }
     public function dataPenjualan()
     {
-        $data = ModelPenjualan::getData();
+        $data = ModelPenjualan::getData(01);
         require 'web/view/dataPenjualan.php';
     }
 }
