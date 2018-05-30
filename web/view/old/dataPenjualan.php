@@ -197,6 +197,7 @@
         ?>
         $("#labelTanggal").addClass("active");
         $("#labelJumlahTerjual").addClass("active");
+
     }
 </script>
 

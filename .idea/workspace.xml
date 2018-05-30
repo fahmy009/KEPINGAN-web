@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5306e139-f37d-4273-9e5e-be27201c8c98" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/controller/peramalanController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/view/ramalanPenjualan.php" afterDir="false" />
+    <list default="true" id="5306e139-f37d-4273-9e5e-be27201c8c98" name="Default" comment="penambahan peramalan">
+      <change afterPath="$PROJECT_DIR$/assets/chartJS/chart.bundle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/controller/dataPenjualanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/controller/dataPenjualanController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/controller/halaman.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/controller/halaman.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/elemen/modal.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/elemen/modal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/elemen/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/elemen/navbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/model/ModelPenjualan.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/model/ModelPenjualan.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/view/dataPenjualan.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/view/dataPenjualan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/old/dataPenjualan.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/view/old/dataPenjualan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/ramalanPenjualan.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/view/ramalanPenjualan.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,41 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="peramalanController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/controller/peramalanController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ramalanPenjualan.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/view/ramalanPenjualan.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="545">
-              <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ModelPenjualan.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/model/ModelPenjualan.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-              <folding>
-                <element signature="n#getData#0;n#ModelPenjualan#0;n#!!top" />
-                <element signature="n#insertData#0;n#ModelPenjualan#0;n#!!top" />
-                <element signature="n#updateData#0;n#ModelPenjualan#0;n#!!top" />
-                <element signature="n#deleteData#0;n#ModelPenjualan#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -113,7 +73,6 @@
         <option value="$PROJECT_DIR$/web/view/dataSapi.php" />
         <option value="$PROJECT_DIR$/web/view/hasilSusuHarian.php" />
         <option value="$PROJECT_DIR$/web/controller/halaman.php" />
-        <option value="$PROJECT_DIR$/web/view/dataPenjualan.php" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/route.php" />
         <option value="$PROJECT_DIR$/web/model/ModelPenjualan.php" />
@@ -121,7 +80,9 @@
         <option value="$PROJECT_DIR$/web/controller/dataPenjualanController.php" />
         <option value="$PROJECT_DIR$/web/controller/peramalanController.php" />
         <option value="$PROJECT_DIR$/web/elemen/modal.php" />
+        <option value="$PROJECT_DIR$/web/view/dataPenjualan.php" />
         <option value="$PROJECT_DIR$/web/view/ramalanPenjualan.php" />
+        <option value="$PROJECT_DIR$/web/view/old/dataPenjualan.php" />
       </list>
     </option>
   </component>
@@ -167,25 +128,31 @@
             <path>
               <item name="KEPINGAN" type="b2602c69:ProjectViewProjectNode" />
               <item name="KEPINGAN" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="KEPINGAN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KEPINGAN" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="chartJS" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="KEPINGAN" type="b2602c69:ProjectViewProjectNode" />
               <item name="KEPINGAN" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="elemen" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="KEPINGAN" type="b2602c69:ProjectViewProjectNode" />
-              <item name="KEPINGAN" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="KEPINGAN" type="b2602c69:ProjectViewProjectNode" />
               <item name="KEPINGAN" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="KEPINGAN" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KEPINGAN" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="old" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -202,19 +169,19 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\KEPINGAN\assets\gambar" />
-      <recent name="C:\xampp\htdocs\KEPINGAN\assets\bootstrap\css" />
-      <recent name="C:\xampp\htdocs\KEPINGAN\assets" />
-      <recent name="C:\xampp\htdocs\KEPINGAN\assets\bootstrap\js" />
-      <recent name="C:\xampp\htdocs\KEPINGAN\assets\bootstrap" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\KEPINGAN\web" />
       <recent name="C:\xampp\htdocs\KEPINGAN\web\view" />
       <recent name="C:\xampp\htdocs\KEPINGAN\web\view\old" />
       <recent name="C:\xampp\htdocs\KEPINGAN\web\view\" />
       <recent name="C:\xampp\htdocs\KEPINGAN\elemen" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\KEPINGAN\assets\chartJS" />
+      <recent name="C:\xampp\htdocs\KEPINGAN\assets\gambar" />
+      <recent name="C:\xampp\htdocs\KEPINGAN\assets\bootstrap\css" />
+      <recent name="C:\xampp\htdocs\KEPINGAN\assets" />
+      <recent name="C:\xampp\htdocs\KEPINGAN\assets\bootstrap\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -246,7 +213,11 @@
       <workItem from="1525312193066" duration="14646000" />
       <workItem from="1525751560920" duration="2044000" />
       <workItem from="1525756603337" duration="762000" />
-      <workItem from="1527236201933" duration="11503000" />
+      <workItem from="1527236201933" duration="12149000" />
+      <workItem from="1527305552841" duration="6079000" />
+      <workItem from="1527659355505" duration="30000" />
+      <workItem from="1527661979594" duration="265000" />
+      <workItem from="1527686734745" duration="505000" />
     </task>
     <task id="LOCAL-00001" summary="ubah modal, kurang div">
       <created>1525757160495</created>
@@ -276,15 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527256191484</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="penambahan peramalan">
+      <created>1527264423530</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1527264423530</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47353000" />
+    <option name="totallyTimeSpent" value="54878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16983895" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -319,9 +296,24 @@
     <MESSAGE value="ubah modal, kurang div" />
     <MESSAGE value="upload" />
     <MESSAGE value="tambah edit syam" />
-    <option name="LAST_COMMIT_MESSAGE" value="tambah edit syam" />
+    <MESSAGE value="penambahan peramalan" />
+    <option name="LAST_COMMIT_MESSAGE" value="penambahan peramalan" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/model/ModelPenjualan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/ramalanPenjualan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="81" column="24" lean-forward="true" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -453,13 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/view/old/dataPenjualan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="122" column="21" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/bootstrap/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -488,9 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koneksi.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/view/old/dataSapi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -509,9 +491,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="54" lean-forward="true" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
-          <folding>
-            <element signature="e#85#91#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -519,11 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="455">
           <caret line="131" column="10" lean-forward="true" selection-start-line="67" selection-start-column="4" selection-end-line="131" selection-end-column="10" />
-          <folding>
-            <element signature="n#ul#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#ul#1;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -545,20 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/view/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/view/hasilSusuHarian.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="53" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -593,16 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/view/dataPenjualan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/controller/dataHasilSusuController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/controller/penjualan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -617,44 +567,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/view/dataSapi.php">
+    <entry file="file://$PROJECT_DIR$/web/model/ModelPenjualan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="37" column="57" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
+        <state relative-caret-position="270">
+          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/elemen/modal.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="113" column="28" selection-start-line="113" selection-start-column="28" selection-end-line="113" selection-end-column="28" />
+        <state relative-caret-position="150">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/model/ModelPenjualan.php">
+    <entry file="file://$PROJECT_DIR$/web/view/dataPenjualan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-          <folding>
-            <element signature="n#getData#0;n#ModelPenjualan#0;n#!!top" />
-            <element signature="n#insertData#0;n#ModelPenjualan#0;n#!!top" />
-            <element signature="n#updateData#0;n#ModelPenjualan#0;n#!!top" />
-            <element signature="n#deleteData#0;n#ModelPenjualan#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="50">
+          <caret line="64" column="105" selection-start-line="64" selection-start-column="105" selection-end-line="64" selection-end-column="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/controller/peramalanController.php">
+    <entry file="file://$PROJECT_DIR$/web/view/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        <state relative-caret-position="150">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/view/ramalanPenjualan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="96" column="32" selection-start-line="96" selection-start-column="32" selection-end-line="96" selection-end-column="32" />
+        <state relative-caret-position="350">
+          <caret line="149" column="24" lean-forward="true" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/hasilSusuHarian.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-370">
+          <caret line="7" column="53" lean-forward="true" selection-start-line="7" selection-start-column="53" selection-end-line="7" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/dataSapi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="42" column="113" selection-start-line="42" selection-start-column="70" selection-end-line="42" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/controller/peramalanController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/view/old/dataPenjualan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
         </state>
       </provider>
     </entry>

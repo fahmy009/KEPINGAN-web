@@ -62,13 +62,13 @@
                         <td><?php echo $single['tanggal']; ?></td>
                         <td><?php echo $single['jumlah']; ?></td>
                         <td>
-                            <a href="#editPenjualan" onclick="setData(<?php echo $single['id'] ?>)"
-                               class="btn btn-info">
-                                <i class="material-icons">edit</i>
-                            </a>
+                            <button href="#editPenjualan" data-toggle="modal" data-target="#editPenjualan" onclick="setData(<?php echo $single['id'] ?>)"
+                               class="btn btn-primary">
+                                Ubah
+                            </button>
                             <a href="http://localhost/KEPINGAN/?c=dataPenjualanController&f=deleteData&id=<?php echo $single['id']; ?>"
                                class="btn btn-danger">
-                                <i class="material-icons">delete</i>
+                                Hapus
                             </a>
                         </td>
                     </tr>

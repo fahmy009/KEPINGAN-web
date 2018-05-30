@@ -18,31 +18,39 @@
     <h2>Ramalan Penjualan</h2>
     <hr>
     <?php $count = 1;
-    if ($dataPenjualan != 'kosong') { ?>
+    if ($dataPenjualan != 'kosong') {
+        $totalPenjualan = 0;
+        $totalRamal = 0; ?>
         <div class="table-responsive">
-            <hr>
             <h3>Tabel Distribusi Penjualan</h3>
-            <div class="col-sm-8 offset-sm-2">
-                <table id="tabelDistribusi" class="table text-center table-hover table-striped">
-                    <thead>
-                    <tr class="table-primary">
-                        <th><b>NO</b></th>
-                        <th><b>Tanggal</b></th>
-                        <th><b>Jumlah</b></th>
-                    </tr>
-                    </thead>
-                    <tbody id="isi">
-                    <?php foreach ($dataPenjualan as $single) {
-                        ?>
-                        <tr>
-                            <td><?php echo $count; ?></td>
-                            <td><?php echo $single['tanggal']; ?></td>
-                            <td><?php echo $single['jumlah']; ?></td>
+            <div class="row">
+                <div class="col-sm-4 offset-1">
+                    <table id="tabelDistribusi" class="table text-center table-hover table-striped">
+                        <thead>
+                        <tr class="table-primary">
+                            <th><b>NO</b></th>
+                            <th><b>Tanggal</b></th>
+                            <th><b>Jumlah</b></th>
                         </tr>
-                        <?php $count++;
-                    } ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody id="isi">
+                        <?php foreach ($dataPenjualan as $single) {
+                            ?>
+                            <tr>
+                                <td><?php echo $count; ?></td>
+                                <td><?php echo $single['tanggal']; ?></td>
+                                <td><?php echo $single['jumlah']; ?></td>
+                            </tr>
+                            <?php
+                            $count++;
+                            $totalPenjualan += $single['jumlah'];
+                        } ?>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-6">
+                    <canvas id="grafik"></canvas>
+                </div>
             </div>
             <hr>
             <h3>Tabel Perhitungan</h3>
@@ -68,8 +76,8 @@
                             <td><?php echo $item['xy']; ?></td>
                             <td><?php echo $item['xx']; ?></td>
                         </tr>
-                    <?php
-                    $a++;
+                        <?php
+                        $a++;
                     } ?>
                     </tbody>
                 </table>
@@ -85,21 +93,34 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <?php for ($b = 0; $b < 7 ; $b++) { ?>
+                    <?php for ($b = 0; $b < count($penjualan); $b++) { ?>
                         <tr>
                             <td><?php echo $a; ?></td>
                             <?php
                             $ramal = $nilaiA + ($nilaiB * $nilaiX);
+                            $totalRamal += $ramal;
                             ?>
                             <td><?php echo $ramal; ?></td>
                         </tr>
-                    <?php
+                        <?php
                         $a++;
-                    $nilaiX += $dekremen;
+                        $nilaiX += $dekremen;
                     } ?>
                     </tbody>
                 </table>
             </div>
+            <hr>
+            <h3>Presentase Akurasi</h3>
+            <div class="col-sm-8 offset-sm-2">
+                <h4>POA = (&sum;Penjualan : &sum;Peramalan) * 100%</h4>
+                <h4>POA = <?php
+                    $presentase = ($totalPenjualan / $totalRamal) * 100;
+                    echo "($totalPenjualan : $totalRamal) * 100% = $presentase" ?>
+                </h4>
+            </div>
+            <br>
+            <br>
+            <br>
         </div>
     <?php } else { ?>
         <div class="col-sm-5">
@@ -112,6 +133,28 @@
 <?php include "web/elemen/footer.php"; ?>
 <?php include "web/elemen/modal.php"; ?>
 
+<script src="assets/chartJS/chart.bundle.js"></script>
+<script>
+    var ctx = document.getElementById('grafik').getContext('2d');
+    var chart = new Chart(ctx, {
+        // The type of chart we want to create
+        type: 'line',
+
+        // The data for our dataset
+        data: {
+            labels: ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"],
+            datasets: [{
+                label: "Data Penjualan",
+                backgroundColor: 'rgb(128,216,255)',
+                borderColor: 'rgb(248,187,208)',
+                data: [0, 10, 5, 2, 20, 30, 45],
+            }]
+        },
+
+        // Configuration options go here
+        options: {}
+    });
+</script>
 <script src="assets/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
 <script src="assets/bootstrap/js/popper.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
