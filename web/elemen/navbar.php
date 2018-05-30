@@ -23,7 +23,7 @@
                     Penjualan</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tentang</a>
+                <a class="nav-link" href="http://localhost/KEPINGAN/?c=halaman&f=tentang">Tentang</a>
             </li>
         </ul>
     </div>
