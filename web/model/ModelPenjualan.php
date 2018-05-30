@@ -24,6 +24,24 @@ class ModelPenjualan
         }
     }
 
+    public static function getDataAwalAkhir($awal, $akhir)
+    {
+        $db = DB::getInstance();
+        $result = $db->query("SELECT tanggal, jumlahTerjual, id FROM penjualan WHERE tanggal BETWEEN '$awal' - INTERVAL 5 DAY AND '$akhir';");
+        if ($result->rowCount() > 0 AND $result->rowCount() == 10 ) {
+            foreach ($result as $item) {
+                $output[] = array(
+                    'tanggal' => $item['tanggal'],
+                    'jumlah'=> $item['jumlahTerjual'],
+                    'id' =>$item['id']
+                );
+            }
+            return $output;
+        } else {
+            return 'kosong';
+        }
+    }
+
     public static function getAllData()
     {
         $db = DB::getInstance();
@@ -41,6 +59,7 @@ class ModelPenjualan
             return 'kosong';
         }
     }
+
 
     public static function insertData($tanggal, $jumlahTerjual)
     {

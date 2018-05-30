@@ -6,9 +6,14 @@ class peramalanController
     {
     }
 
-    public function ramal()
+    public function halamanRamal()
     {
-        $dataPenjualan = ModelPenjualan::getAllData();
+        require_once 'web/view/ramalanPenjualan.php';
+    }
+
+    public function ramal($awal, $akhir)
+    {
+        $dataPenjualan = ModelPenjualan::getDataAwalAkhir($awal, $akhir);
         if ($dataPenjualan != 'kosong') {
             $nilaiX = 0;
             $nilaiA = 0;
@@ -18,9 +23,10 @@ class peramalanController
             $jumlahXX = 0;
             $dekremen = -1;
 
-//            $penjualan[] = array();
+            $selisih = count($dataPenjualan) - 5;
+            $jumlahHariRamal = count($dataPenjualan) - $selisih;
 
-            $hari = count($dataPenjualan);
+            $hari = 5;
 
             if ($hari % 2 == 1) {
                 $nilaiX = (($hari - 1) / 2) * -1;
@@ -34,10 +40,12 @@ class peramalanController
                 $penjualan[] = array(
                     'x' => $i,
                     'y' => $item['jumlah'],
-                    'xy'=> $i * $item['jumlah'],
+                    'xy' => $i * $item['jumlah'],
                     'xx' => $i * $i
                 );
                 $i += $dekremen;
+                $hari--;
+                if ($hari == 0) break;
             }
 
             foreach ($penjualan as $item) {
@@ -57,9 +65,30 @@ class peramalanController
              * dimana X adalah variabel
              *
              */
+            $totalRamal = 0;
+            $totalAktual = 0;
+            for ($i = 0; $i < $jumlahHariRamal; $i++) {
+                $ramal = $nilaiA + ($nilaiB * $nilaiX);
+                $totalRamal += $ramal;
+                $totalAktual += $dataPenjualan[$i + 5]['jumlah'];
+                $peramalan[] = array(
+                    'ramal' => $ramal,
+                    'aktual' => $dataPenjualan[$i + 5]['jumlah']
+                );
+                $nilaiX += $dekremen;
+            }
+
+            $diff = abs($totalAktual - $totalRamal);
+            $MAD = $diff / $jumlahHariRamal;
+            $MSE = ($diff*$diff) / $jumlahHariRamal;
+            $MAPE = (($MAD / $totalAktual) / $jumlahHariRamal) * 100;
+
+            echo $MAD;
+            echo $MSE;
+            echo $MAPE;
         }
 
-        require_once 'web/view/ramalanPenjualan.php';
+//        require_once 'web/view/ramalanPenjualan.php';
     }
 }
 
