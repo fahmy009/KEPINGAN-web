@@ -139,8 +139,8 @@
                 <hr>
                 <h3>Presentase Akurasi</h3>
                 <div class="col-sm-8 offset-sm-2">
-                    <h4>Mean Absolute </h4>
-
+                    <h3>Mean Absolute Deviation (MAD)</h3>
+                    <h4><var>MAD</var> </h4>
 <!--                    <h4>POA = (&sum;Penjualan : &sum;Peramalan) * 100%</h4>-->
 <!--                    <h4>POA = --><?php
 //                        $presentase = ($totalPenjualan / $totalRamal) * 100;
