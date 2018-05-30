@@ -17,7 +17,7 @@
 <!-- body -->
 <div class="container-fluid">
     <h2>Hasil Susu Harian</h2>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahSusuHarian">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahSusu">
         Tambah
     </button>
     <hr>

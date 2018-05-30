@@ -11,8 +11,10 @@ class peramalanController
         require_once 'web/view/ramalanPenjualan.php';
     }
 
-    public function ramal($awal, $akhir)
+    public function ramal()
     {
+        $awal = $_POST['awal'];
+        $akhir = $_POST['akhir'];
         $dataPenjualan = ModelPenjualan::getDataAwalAkhir($awal, $akhir);
         if ($dataPenjualan != 'kosong') {
             $nilaiX = 0;

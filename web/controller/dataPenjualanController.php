@@ -10,6 +10,7 @@ class dataPenjualanController
     {
         $bulan = $_GET['month'];
         $data = ModelPenjualan::getData($bulan);
+//        $maks = ModelHasilSusu::getDataTerakhir($bulan);
         require_once 'web/model/ModelDataSapi.php';
         require_once "web/view/dataPenjualan.php";
     }

@@ -16,7 +16,7 @@
 <!-- body -->
 <div class="container-fluid">
     <h2>Penjualan Bulanan</h2>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#inputPenjualan">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahPenjualan">
         Tambah
     </button>
     <hr>

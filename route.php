@@ -20,6 +20,7 @@ function call($controller, $action)
             $controller = new dataSapiController();
             break;
         case 'dataPenjualanController':
+//            require_once 'web/model/ModelHasilSusu.php';
             require_once 'web/model/ModelPenjualan.php';
             $controller = new dataPenjualanController();
             break;
