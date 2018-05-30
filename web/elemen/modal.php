@@ -54,21 +54,18 @@
 </div>
 
 <!-- Input Penjualan -->
-<div class="modal fade" id="tambahPenjualan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog">
+<div id="tambahPenjualan" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form role="form" action="http://localhost/KEPINGAN/?c=dataPenjualanController&f=addData"
-                  method="post">
-                <div class="modal-header"
-                     style="background-color: #007A87; color: #fff; border-radius: 3px 3px 0px 0px;">
-                    <h4 class="modal-title" id="myModalLabel">Tambah Penjualan Susu</h4>
+            <form action="http://localhost/KEPINGAN/?c=dataPenjualanController&f=addData" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tambah Penjualan Susu</h5>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
-                        <label for="penjualanTanggal">Tanggal</label>
-                        <input type="date" class="form-control" name="tanggal" id="penjualanTanggal"/>
-                    </div>
+                  <div class="form-group">
+                      <label for="penjualanTanggal">Tanggal</label>
+                      <input type="date" class="form-control" name="tanggal" id="penjualanTanggal"/>
+                  </div>
                     <div class="form-group">
                         <label for="">Jumlah Penjualan</label>
                         <input class="form-control" type="text" placeholder="Masukkan Jumlah Penjualan"
@@ -76,10 +73,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal"> BATAL</button>
-                    <button type="submit" class="btn btn-success" style="background-color: #007A87; color: #fff;">
-                        TAMBAH
-                    </button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-primary" value="Simpan">
                 </div>
             </form>
         </div>
