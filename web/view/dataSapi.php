@@ -63,6 +63,23 @@
 <?php include "web/elemen/footer.php"; ?>
 <?php include "web/elemen/modal.php"; ?>
 
+<script type="text/javascript">
+    function setData(id) {
+        var idProduct = id;
+        <?php
+        $modelSapi = new ModelDataSapi();
+        $dataSapi = $modelSapi->getData();
+        foreach ($dataSapi as $data) { ?>
+        if (idProduct == <?php echo $data[id]; ?>) {
+            $("#beratEdit").val(" <?php echo $data[berat]; ?>");
+            $("#tanggalLahirEdit").val(<?php echo $data[tanggalLahir]; ?>");
+            $("#id").val("<?php echo $data[id]; ?>");
+        }
+        <?php }; ?>
+        $("#labelBerat").addClass("active");
+        $("#labelTanggal").addClass("active");
+    }
+</script>
 <script src="assets/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
 <script src="assets/bootstrap/js/popper.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
