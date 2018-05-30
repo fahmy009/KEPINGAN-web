@@ -29,6 +29,7 @@
       <span class="site-heading-lower">KEPINGAN</span>
     </h1>
 
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
       <div class="container">
@@ -63,6 +64,7 @@
       </div>
     </nav>
     <?php include "web/elemen/modal.php"; ?>
+
 
     <section class="page-section cta">
       <div class="container">

@@ -25,6 +25,18 @@ class ModelHasilSusu
         }
     }
 
+    public static function getDataTerakhir($bulan)
+    {
+        $db = DB::getInstance();
+        $result = $db->query("SELECT SUM(jumlah) as jum FROM hasilSusu WHERE MONTH(tanggal) = '$bulan' ORDER BY id DESC LIMIT 1;");
+        if ($result->rowCount() > 0) {
+            $output = $result['jum'];
+            return $output;
+        } else {
+            return 'kosong';
+        }
+    }
+
     public static function insertData($tanggal, $idSapi, $jumlah)
     {
         $db = DB::getInstance();

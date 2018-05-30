@@ -19,11 +19,11 @@
                         Penjualan</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://localhost/KEPINGAN/?c=peramalanController&f=ramal">Ramalan
+                <a class="nav-link" href="http://localhost/KEPINGAN/?c=peramalanController&f=halamanRamal&pilih">Ramalan
                     Penjualan</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Tentang</a>
+                <a class="nav-link" href="http://localhost/KEPINGAN/?c=halaman&f=tentang">Tentang</a>
             </li>
         </ul>
     </div>

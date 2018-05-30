@@ -32,4 +32,8 @@ class halaman
         $data = ModelPenjualan::getData(01);
         require 'web/view/dataPenjualan.php';
     }
+    public function tentang()
+    {
+      require 'web/view/tentang.php';
+    }
 }
