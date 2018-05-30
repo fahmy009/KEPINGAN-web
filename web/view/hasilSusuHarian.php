@@ -40,9 +40,10 @@
                     <td><?php echo $single['idSapi']; ?></td>
                     <td><?php echo $single['jumlah']; ?></td>
                     <td>
-                        <a href="#editSusuHarian" onclick="setData(<?php echo $single['id']  ?>)" class="btn waves-effect waves-light yellow accent-3 modal-trigger">
-                            <i class="material-icons">edit</i>
-                        </a>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#editSusu" onclick="setData(<?php echo $single['id'] ?>)">
+                            Ubah
+                        </button>
                         <a href="http://localhost/KEPINGAN/?c=dataHasilSusuController&f=deleteData&id=<?php echo $single['id'] ?>" class="btn waves-effect waves-light red accent-3">
                             <i class="material-icons">delete</i>
                         </a>
@@ -61,6 +62,23 @@
 <?php include "web/elemen/footer.php"; ?>
 <?php include "web/elemen/modal.php"; ?>
 
+<script>
+    function setData(id) {
+        var idProduct = id;
+        <?php
+        if ($data != 'kosong') {
+        foreach ($data as $dat) { ?>
+        if (idProduct == <?php echo $dat['id']; ?>) {
+            $("#tanggalSusuEdit").val("<?php echo $dat['tanggal']; ?>");
+            $("#jumlahSusuEdit").val(<?php echo $dat['jumlah']; ?>);
+            $("#idSapiSusuEdit").val(<?php echo $dat['idSapi']; ?>);
+            $("#idSusuHarianEdit").val(<?php echo $dat['id']; ?>);
+
+        }
+        <?php }
+        }; ?>
+    }
+</script>
 <script src="assets/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
 <script src="assets/bootstrap/js/popper.min.js"></script>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>

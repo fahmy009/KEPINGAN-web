@@ -17,9 +17,9 @@ class dataHasilSusuController
 
     public function editData()
     {
-        $id = $_POST['id'];
-        $tanggal = $_POST['tanggal'];
-        $jumlahTerjual = $_POST['jumlahTerjual'];
+        $id = $_POST['idSapiSusuEdit'];
+        $tanggal = $_POST['tanggalSusuEdit'];
+        $jumlahTerjual = $_POST['jumlahSusuEdit'];
         $hasil = ModelPenjualan::updateData($id, $tanggal, $jumlahTerjual);
         header('Location: http://localhost/KEPINGAN/?c=halaman&f=hasilSusuHarian');
     }

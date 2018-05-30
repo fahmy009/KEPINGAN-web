@@ -4,7 +4,7 @@
         <div class="modal-content">
             <form action="http://localhost/KEPINGAN/?c=dataSapiController&f=addData" method="post">
                 <div class="modal-header">
-                    <h5 class="modal-title">Edit Data Sapi</h5>
+                    <h5 class="modal-title">Tambah Data Sapi</h5>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -31,7 +31,8 @@
         <div class="modal-content">
             <form action="http://localhost/KEPINGAN/?c=dataSapiController&f=addData" method="post">
                 <div class="modal-header">
-                    <h5 class="modal-title">Edit Data Sapi</h5>
+                    <input type="hidden" name="idSapiEdit">
+                    <h5 class="modal-title">Ubah Data Sapi</h5>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -61,7 +62,7 @@
                   method="post">
                 <div class="modal-header"
                      style="background-color: #007A87; color: #fff; border-radius: 3px 3px 0px 0px;">
-                    <h4 class="modal-title" id="myModalLabel">Input Penjualan Susu</h4>
+                    <h4 class="modal-title" id="myModalLabel">Tambah Penjualan Susu</h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -92,9 +93,10 @@
         <div class="modal-content">
             <form role="form" action="http://localhost/KEPINGAN/?c=dataPenjualanController&f=addData"
                   method="post">
+                <input type="hidden" name="idPenjualanEdit">
                 <div class="modal-header"
                      style="background-color: #007A87; color: #fff; border-radius: 3px 3px 0px 0px;">
-                    <h4 class="modal-title" id="myModalLabel">Input Penjualan Susu</h4>
+                    <h4 class="modal-title" id="myModalLabel">Ubah Penjualan Susu</h4>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
@@ -102,7 +104,7 @@
                         <input type="date" class="form-control" name="tanggal" id="penjualanTanggalEdit"/>
                     </div>
                     <div class="form-group">
-                        <label for="">Jumlah Penjualan</label>
+                        <label for="jumlahTerjualEdit">Jumlah Penjualan</label>
                         <input class="form-control" type="text" placeholder="Masukkan Jumlah Penjualan"
                                id="jumlahTerjualEdit" name="jumlahTerjual">
                     </div>
@@ -163,7 +165,8 @@
         <div class="modal-content">
             <form action="http://localhost/KEPINGAN/?c=dataHasilSusuController&f=addData" method="post">
                 <div class="modal-header">
-                    <h5 class="modal-title">Tambah Susu Harian</h5>
+                    <input type="hidden" name="idSusuHarianEdit">
+                    <h5 class="modal-title">Ubah Susu Harian</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

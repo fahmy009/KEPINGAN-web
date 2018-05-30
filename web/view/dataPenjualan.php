@@ -62,8 +62,8 @@
                         <td><?php echo $single['tanggal']; ?></td>
                         <td><?php echo $single['jumlah']; ?></td>
                         <td>
-                            <button href="#editPenjualan" data-toggle="modal" data-target="#editPenjualan" onclick="setData(<?php echo $single['id'] ?>)"
-                               class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#editPenjualan" onclick="setData(<?php echo $single['id'] ?>)">
                                 Ubah
                             </button>
                             <a href="http://localhost/KEPINGAN/?c=dataPenjualanController&f=deleteData&id=<?php echo $single['id']; ?>"
@@ -94,6 +94,20 @@
         window.location = "http://localhost/KEPINGAN/?c=dataPenjualanController&f=getData&month=" + bulan;
     }
 
+    function setData(id) {
+        var idProduct = id;
+        <?php
+        if ($data != 'kosong') {
+        foreach ($data as $dat) { ?>
+        if (idProduct == <?php echo $dat['id']; ?>) {
+            $("#penjualanTanggalEdit").val("<?php echo $dat['tanggal']; ?>");
+            $("#jumlahTerjualEdit").val(<?php echo $dat['jumlah']; ?>);
+            $("#idPenjualanEdit").val(<?php echo $dat['id']; ?>);
+        }
+        <?php }
+        }; ?>
+    }
+
     var month = <?php
         if (!isset($_GET['month'])) {
             echo "'01'";
@@ -102,21 +116,7 @@
         }
         ?>;
     var e = document.getElementById("bulan").value = month;
-</script>
 
-<script type="text/javascript">
-    function setData(id) {
-        var idProduct = id;
-        <?php
-        $modelSapi = new ModelDataSapi();
-        $dataSapi = $modelSapi->getData();
-        foreach ($dataSapi as $data) {
-            echo "if (idProduct==$data[id]) {\$(\"#beratEdit\").val(\"$data[berat]\");\$(\"#tanggalLahirEdit\").val(\"$data[tanggalLahir]\");\$(\"#id\").val(\"$data[id]\");}";
-        };
-        ?>
-        $("#labelBerat").addClass("active");
-        $("#labelTanggal").addClass("active");
-    }
 </script>
 <script src="assets/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
 <script src="assets/bootstrap/js/popper.min.js"></script>

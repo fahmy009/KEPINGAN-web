@@ -40,7 +40,7 @@
                     <td><?php echo $single['tanggalLahir']; ?></td>
                     <td><?php echo $single['umur']; ?></td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editSapi">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editSapi" onclick="setData(<?php echo $single['id']; ?>)">
                             Ubah
                         </button>
                         <a href="http://localhost/KEPINGAN/?c=dataSapiController&f=deleteData&id=<?php echo $single['id']; ?>"
@@ -67,17 +67,16 @@
     function setData(id) {
         var idProduct = id;
         <?php
-        $modelSapi = new ModelDataSapi();
-        $dataSapi = $modelSapi->getData();
-        foreach ($dataSapi as $data) { ?>
-        if (idProduct == <?php echo $data[id]; ?>) {
-            $("#beratEdit").val(" <?php echo $data[berat]; ?>");
-            $("#tanggalLahirEdit").val(<?php echo $data[tanggalLahir]; ?>");
-            $("#id").val("<?php echo $data[id]; ?>");
+        if ($data != 'kosong') {
+        foreach ($data as $dat) { ?>
+        if (idProduct == <?php echo $dat['id']; ?>) {
+            $("#beratEdit").val("<?php echo $dat['berat']; ?>");
+            $("#tanggalEdit").val("<?php echo $dat['tanggalLahir']; ?>");
+            $("#idSapiEdit").val("<?php echo $dat['id']; ?>");
         }
-        <?php }; ?>
-        $("#labelBerat").addClass("active");
-        $("#labelTanggal").addClass("active");
+        <?php
+        }
+        }; ?>
     }
 </script>
 <script src="assets/bootstrap/js/jquery-3.3.1.slim.min.js"></script>

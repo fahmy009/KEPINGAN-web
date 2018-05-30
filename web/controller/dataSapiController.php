@@ -16,9 +16,9 @@ class dataSapiController
 
     public function editData()
     {
-        $id = $_POST['id'];
-        $berat = $_POST['berat'];
-        $tanggalLahir = $_POST['tanggalLahir'];
+        $id = $_POST['idSapiEdit'];
+        $berat = $_POST['beratEdit'];
+        $tanggalLahir = $_POST['tanggalEdit'];
         $hasil = ModelDataSapi::updateData($id, $berat, $tanggalLahir);
         header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataSapi');
     }
