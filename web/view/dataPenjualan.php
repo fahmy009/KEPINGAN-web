@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
 
-    <title>Business Casual - Start Bootstrap Theme</title>
+    <title>Data Penjualan</title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
