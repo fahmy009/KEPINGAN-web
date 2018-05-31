@@ -74,6 +74,7 @@ class peramalanController
                 $totalRamal += $ramal;
                 $totalAktual += $dataPenjualan[$i + 5]['jumlah'];
                 $peramalan[] = array(
+                    'tanggal' => $dataPenjualan[$i + 5]['tanggal'],
                     'ramal' => $ramal,
                     'aktual' => $dataPenjualan[$i + 5]['jumlah']
                 );
