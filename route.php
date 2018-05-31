@@ -4,16 +4,11 @@ function call($controller, $action)
     require_once('web/controller/' . $controller . '.php');
 
     switch ($controller) {
-        case 'halaman':
-            require_once 'web/model/Peternakan.php';
+        case 'halamanController':
             require_once 'web/model/ModelDataSapi.php';
             require_once 'web/model/ModelHasilSusu.php';
             require_once 'web/model/ModelPenjualan.php';
-            $controller = new halaman();
-            break;
-        case 'penjualan':
-            require_once 'web/model/Peternakan.php';
-            $controller = new penjualan();
+            $controller = new halamanController();
             break;
         case 'dataSapiController':
             require_once 'web/model/ModelDataSapi.php';
@@ -29,7 +24,6 @@ function call($controller, $action)
             $controller = new dataHasilSusuController();
             break;
         case 'peramalanController':
-            require_once 'web/model/Peternakan.php';
             require_once 'web/model/ModelDataSapi.php';
             require_once 'web/model/ModelHasilSusu.php';
             require_once 'web/model/ModelPenjualan.php';

@@ -11,7 +11,7 @@ class dataSapiController
         $berat = $_POST['berat'];
         $tanggalLahir = $_POST['tanggalLahir'];
         $hasil = ModelDataSapi::insertData($berat,$tanggalLahir);
-        header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataSapi');
+        header('Location: http://localhost/KEPINGAN/?c=halamanController&f=dataSapi');
     }
 
     public function editData()
@@ -20,13 +20,13 @@ class dataSapiController
         $berat = $_POST['beratEdit'];
         $tanggalLahir = $_POST['tanggalEdit'];
         $hasil = ModelDataSapi::updateData($id, $berat, $tanggalLahir);
-        header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataSapi');
+        header('Location: http://localhost/KEPINGAN/?c=halamanController&f=dataSapi');
     }
 
     public function deleteData(){
         $id = $_GET['id'];
         $hasil = ModelDataSapi::deleteData($id);
-        header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataSapi');
+        header('Location: http://localhost/KEPINGAN/?c=halamanController&f=dataSapi');
 
     }
 }

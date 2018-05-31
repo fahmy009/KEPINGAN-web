@@ -20,7 +20,7 @@ class dataPenjualanController
         $tanggal = $_POST['tanggal'];
         $jumlahTerjual = $_POST['jumlahTerjual'];
         $hasil = ModelPenjualan::insertData($tanggal, $jumlahTerjual);
-        header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataPenjualan');
+        header('Location: http://localhost/KEPINGAN/?c=halamanController&f=dataPenjualan');
     }
 
     public function editData()
@@ -29,13 +29,13 @@ class dataPenjualanController
         $tanggal = $_POST['tanggal'];
         $jumlahTerjual = $_POST['jumlahTerjual'];
         $hasil = ModelPenjualan::updateData($id, $tanggal, $jumlahTerjual);
-        header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataPenjualan');
+        header('Location: http://localhost/KEPINGAN/?c=halamanController&f=dataPenjualan');
     }
 
     public function deleteData()
     {
         $id = $_GET['id'];
         $hasil = ModelPenjualan::deleteData($id);
-        header('Location: http://localhost/KEPINGAN/?c=halaman&f=dataPenjualan');
+        header('Location: http://localhost/KEPINGAN/?c=halamanController&f=dataPenjualan');
     }
 }

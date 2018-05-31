@@ -6,7 +6,7 @@ if (isset($_GET['c']) && isset($_GET['f'])) {
     $controller = $_GET['c'];
     $action = $_GET['f'];
 } else {
-    $controller = 'halaman';
+    $controller = 'halamanController';
     $action = 'home';
 }
 require_once('route.php');
