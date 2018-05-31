@@ -54,7 +54,7 @@
                     <a class="nav-link text-uppercase text-expanded" href="http://localhost/KEPINGAN/?c=halamanController&f=dataPenjualan">Data Penjualan Harian</a>
                 </li>
                 <li class="nav-item active px-lg-4">
-                    <a class="nav-link text-uppercase text-expanded" href="http://localhost/KEPINGAN/?c=peramalanController&f=ramal">Ramalan Penjualan</a>
+                    <a class="nav-link text-uppercase text-expanded" href="http://localhost/KEPINGAN/?c=peramalanController&f=halamanRamal&pilih">Ramalan Penjualan</a>
                 </li>
                 <li class="nav-item px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" href="http://localhost/KEPINGAN/?c=halamanController&f=tentang">Tentang</a>
@@ -101,8 +101,7 @@
                     <?php } else { ?>
                         <?php $count = 1;
                         if ($dataPenjualan != 'kosong') {
-                            $totalPenjualan = 0;
-                            $totalRamal = 0; ?>
+                            $totalPenjualan = 0; ?>
                             <div class="table-responsive">
                                 <h3>Tabel Distribusi Penjualan</h3>
                                 <div class="row">

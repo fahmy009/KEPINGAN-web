@@ -15,6 +15,9 @@ class peramalanController
     {
         $awal = $_POST['awal'];
         $akhir = $_POST['akhir'];
+        $totalRamal = 0;
+        $totalAktual = 0;
+
         $dataPenjualan = ModelPenjualan::getDataAwalAkhir($awal, $akhir);
         if ($dataPenjualan != 'kosong') {
             $nilaiX = 0;
@@ -67,8 +70,6 @@ class peramalanController
              * dimana X adalah variabel
              *
              */
-            $totalRamal = 0;
-            $totalAktual = 0;
             for ($i = 0; $i < $jumlahHariRamal; $i++) {
                 $ramal = $nilaiA + ($nilaiB * $nilaiX);
                 $totalRamal += $ramal;
@@ -85,13 +86,8 @@ class peramalanController
             $MAD = $diff / $jumlahHariRamal;
             $MSE = ($diff*$diff) / $jumlahHariRamal;
             $MAPE = (($MAD / $totalAktual) / $jumlahHariRamal) * 100;
-
-            echo $MAD;
-            echo $MSE;
-            echo $MAPE;
         }
-
-//        require_once 'web/view/ramalanPenjualan.php';
+        require_once 'web/view/ramalanPenjualan.php';
     }
 }
 

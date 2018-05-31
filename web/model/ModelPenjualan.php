@@ -28,7 +28,7 @@ class ModelPenjualan
     {
         $db = DB::getInstance();
         $result = $db->query("SELECT tanggal, jumlahTerjual, id FROM penjualan WHERE tanggal BETWEEN '$awal' - INTERVAL 5 DAY AND '$akhir';");
-        if ($result->rowCount() > 0 AND $result->rowCount() == 10 ) {
+        if ($result->rowCount() > 0 AND $result->rowCount() > 5 ) {
             foreach ($result as $item) {
                 $output[] = array(
                     'tanggal' => $item['tanggal'],
